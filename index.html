@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day03-weather-forecast-app</title>
+    <script src="tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        first: '#898AA6',
+                        second: '#C9BBCF',
+                        third: '#B7D3DF',
+                        fourth: '#D6EFED',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="text-center bg-first text-white py-6">
+        <h1 class="text-2xl font-bold">day03-weather-forecast-app</h1>
+        <p class="px-2">Fetch and display current weather for a location using an API.</p>
+    </header>
+    <section class="relative w-[100%] h-[80vh]">
+        <div class="absolute w-[450px] h-[350px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border border-1 rounded">
+            <div class="w-full h-[180px] overflow-hidden">
+                <img src="./image.png" alt="">
+            </div>
+            <div class="m-4 text-center grid grid-cols-2 gap-2">
+                <div class="text-6xl">⌚ <span id="time" class="text-4xl"></span> </div>
+                <div class="text-left">
+                    <div class="text-2xl shadow my-3 rounded-lg p-2">🌡️ <span id="temp"></span></div>
+                    <div class="text-2xl shadow my-3 rounded-lg p-2">🍃 <span id="wind"></span> </div>
+                    <!-- <div class="text-2xl">💦 <span id="humidity"></span> </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="p-2">
+        <p class="text-center">Copyright &copy; 2024</p>
+    </footer>
+</body>
+
+</html>
